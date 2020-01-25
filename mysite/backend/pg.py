@@ -27,11 +27,13 @@ def testOut():
         #this segment contains all the constructors for the types of goals depend on what you want to create
         typeGoal = input("Enter max if it is a restriction, Enter min if it is a minimum goal, enter anything else for it to be yes/no type of goal. ")
         if (typeGoal.casefold() == 'max'):
-            max = input("Input a maximum number. This is the limit of the goal you want to set" )
-            #insert constructor here
+            metric = input("Set a metric you are trying to measure. ")
+            max = inputNumber("Input a maximum number. This is the limit of the goal you want to set ")
+            goals.append(Goal.MaxGoal(title, description, metric, max))
         elif (typeGoal.casefold() == 'min'):
+            metric = input("Set a metric you are trying to measure. ")
             min = input("Input a minimum number. This is the minimum to acheive your goal" )
-            #insert constructor here
+            goals.append(Goal.MinGoal(title, description, metric, min))
         else: #if its a yes/no goal
             print("This goal will have a simple yes or no completion requirement")
             goals.append(Goal.YesNoGoal(title, description))
@@ -40,5 +42,17 @@ def testOut():
             break
         numGoals += 1
     print("done")
-    
-testOut()
+
+#this is just a premade test case
+def testcase1():
+    goals.append(Goal.MinGoal("Sleep", "Get enough sleep", "hours", 8))
+    goals.append(Goal.MaxGoal("TV Time", "Dont watch too much tv", "hours", 3))
+    goals.append(Goal.MinGoal("Read", "Read a number of pages every day", "pages", 50))
+    goals.append(Goal.YesNoGoal("Dishes", "Do dishes"))
+
+
+
+#testOut()
+testcase1()
+for n in goals:
+    print(n.toString())
