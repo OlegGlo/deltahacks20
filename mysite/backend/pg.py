@@ -1,4 +1,4 @@
-
+import Goal
 goals = []
 
 def inputNumber(message): #yeah, I basically stole this code online where it just takes an integer input
@@ -34,7 +34,7 @@ def testOut():
             #insert constructor here
         else: #if its a yes/no goal
             print("This goal will have a simple yes or no completion requirement")
-            #goals.append(YesNoGoal(title, desc))
+            goals.append(Goal.YesNoGoal(title, description))
         askAgain = input("Would you like to set another goal? enter Yes to make another: ")
         if (askAgain.casefold() != 'yes'):
             break
