@@ -1,5 +1,7 @@
 import Goal
 goals = []
+days = []
+numDays = 0
 
 def inputNumber(message): #yeah, I basically stole this code online where it just takes an integer input
   while True:
@@ -16,7 +18,7 @@ def inputNumber(message): #yeah, I basically stole this code online where it jus
 def testOut():
     
     numGoals = 1 #int i counts how many goals you are 
-    challengeLength = inputNumber("How many days would you like the challenge to run for? ") #number of days the challenge runs for
+    numDays = inputNumber("How many days would you like the challenge to run for? ") #number of days the challenge runs for
     while(True):
         #this segment is where the title and description of the goal are set
         print("Goal number " + str(numGoals) + ".")
@@ -45,14 +47,26 @@ def testOut():
 
 #this is just a premade test case
 def testcase1():
+    numDays = 20
     goals.append(Goal.MinGoal("Sleep", "Get enough sleep", "hours", 8))
     goals.append(Goal.MaxGoal("TV Time", "Dont watch too much tv", "hours", 3))
     goals.append(Goal.MinGoal("Read", "Read a number of pages every day", "pages", 50))
     goals.append(Goal.YesNoGoal("Dishes", "Do dishes"))
 
+#to initialize the number of days
+def initializeDays():
+    for i in range(0,numDays):
+        days.append(goals)
 
+def daysChart():
+#    for i in range(0,numDays):
+#        for j in goals:
 
+        
 #testOut()
-testcase1()
+#testcase1()
+initializeDays()
+
+
 for n in goals:
     print(n.toString())
