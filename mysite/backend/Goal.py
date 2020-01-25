@@ -15,6 +15,9 @@ class YesNoGoal(Goal):
     def __init__(self, title, desc):
         super(YesNoGoal, self).__init__(title, desc)
 
+    def setState(self, state):
+        self.completed = state
+
     def toString(self):
         return "=== YesNoGoal ===\n" + super(YesNoGoal, self).toString() + "\n"
 
@@ -31,21 +34,21 @@ class QuantitativeGoal(Goal):
 
 # MinGoal Class
 class MinGoal(QuantitativeGoal):
+
     def __init__(self, title, desc, metric, goalQuantity):
         super(MinGoal, self).__init__(title, desc, metric, goalQuantity)
 
     def toString(self):
-        return "=== MinGoal ===\n" + super(MinGoal, self).toString() + "\n"
+        return "=== MinGoal ===\n" + super(MinGoal, self).toString() + "\nMin " + self.metric + ": " + str(self.goalQuantity) +  "\n"
 
 # MaxGoal Class
 class MaxGoal(QuantitativeGoal):
+
     def __init__(self, title, desc, metric, goalQuantity):
         super(MaxGoal, self).__init__(title, desc, metric, goalQuantity)
 
     def toString(self):
-        return "=== MaxGoal ===\n" + super(MaxGoal, self).toString() + "\n"
-
-###
+        return "=== MaxGoal ===\n" + super(MaxGoal, self).toString() + "\nMax " + self.metric + ": " + str(self.goalQuantity) +  "\n"
 
 # g = Goal("bruh", "be bruhed")
 # print(g.toString())
