@@ -64,8 +64,8 @@ def daysChart():
 
         
 #testOut()
-#testcase1()
-initializeDays()
+testcase1()
+#initializeDays()
 
 
 for n in goals:
