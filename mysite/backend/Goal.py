@@ -45,7 +45,7 @@ class MaxGoal(QuantitativeGoal):
     def toString(self):
         return "=== MaxGoal ===\n" + super(MaxGoal, self).toString() + "\n"
 
-
+###
 
 # g = Goal("bruh", "be bruhed")
 # print(g.toString())
