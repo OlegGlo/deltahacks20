@@ -1,0 +1,31 @@
+
+
+.wrapper {
+    width: 960px;
+    margin: 0 auto;
+  }
+  
+  header {
+      width: 960px;
+  }
+
+  h1 {
+      color: red;
+  }
+  
+  p {
+      color: royalblue;
+  }
+
+  nav, section {
+    float: left;
+  }
+  
+  nav {
+    width: 200px;
+    margin-right: 10px;
+  }
+  
+  section {
+    width: 750px;
+  }
