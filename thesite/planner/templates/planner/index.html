@@ -1,0 +1,14 @@
+
+<!--
+Refer to this as polls/index.html
+-->
+
+{% if latest_goal_list %}
+    <ul>
+    {% for goal in latest_goal_list %}
+        <li><a href="{% url 'planner:detail' goal.id %}">{{ goal.goal_title }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No goals are available.</p>
+{% endif %}

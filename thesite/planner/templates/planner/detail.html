@@ -1,0 +1,23 @@
+
+
+<h1>{{ goal.goal_title }}</h1>
+<ul>
+{% for progress in goal.progress_set.all %}
+    <li>{{ progress.prog_tracker }}</li>
+{% endfor %}
+</ul>
+
+
+
+<h1>{{ goal.goal_title }}</h1>
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+<form action="{% url 'planner:vote' goal.id %}" method="post">
+{% csrf_token %}
+{% for progress in goal.progress_set.all %}
+    <input type="radio" name="progress" id="progress{{ forloop.counter }}" value="{{ progress.id }}">
+    <label for="progress{{ forloop.counter }}">{{ progress.choice_text }}</label><br>
+{% endfor %}
+<input type="submit" value="Vote">
+</form>

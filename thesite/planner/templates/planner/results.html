@@ -1,0 +1,11 @@
+
+<h1>{{ goal.goal_title }}</h1>
+
+<ul>
+{% for progress in goal.progress_set.all %}
+    <li>{{ progress.choice_text }} -- {{ progress.activity }} vote{{ progress.activity|pluralize }}</li>
+{% endfor %}
+</ul>
+
+<a href="{% url 'planner:detail' goal.id %}">Log again?</a>
+
