@@ -32,11 +32,11 @@ def setDay(day, newDay):
 for n in range(0, numDays):
     appendDay()
 
-appendGoal(0, Goal.YesNoGoal("Eat an Apple", "Eat an Apple today."))
+# appendGoal(0, Goal.YesNoGoal("Eat an Apple", "Eat an Apple today."))
 
-setGoal(0, 0, Goal.MinGoal("Pushups", "Complete 10 pushups.", "pushups", 10))
+# setGoal(0, 0, Goal.MinGoal("Pushups", "Complete 10 pushups.", "pushups", 10))
 
-print(days)
+# print(days)
 
-print(getGoal(0,0).toString())
+# print(getGoal(0,0).toString())
 # print(len(days))
