@@ -29,8 +29,12 @@ def setGoal(day, goalIndex, newGoal):
 def setDay(day, newDay):
     days[day] = newDay
 
-for n in range(0, numDays):
-    appendDay()
+def batchGoalAppend(goal, dayStart, dayEnd):
+    for n in range(dayStart, dayEnd):
+        days[n].append(goal)
+
+# for n in range(0, numDays):
+#     appendDay()
 
 # appendGoal(0, Goal.YesNoGoal("Eat an Apple", "Eat an Apple today."))
 
