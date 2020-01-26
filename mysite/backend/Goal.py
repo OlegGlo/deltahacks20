@@ -64,15 +64,9 @@ class MaxGoal(QuantitativeGoal):
     def toString(self):
         return "=== MaxGoal ===\n" + super(MaxGoal, self).toString() + "\nMax " + self.metric + ": " + str(self.goalQuantity) +  "\nCurrent # of " + self.metric + ": " + str(self.currentQuantity) + "\n"
 
-# g = Goal("bruh", "be bruhed")
-# print(g.toString())
+# mg = MinGoal("this is a goal", "achieve this goal!", "pushups", 10)
+# print(mg.toString())
 
-# yn = YesNoGoal("this is a goal", "achieve this goal!")
-# print(yn.toString())
+# mg.setState(50)
 
-mg = MinGoal("this is a goal", "achieve this goal!", "pushups", 10)
-print(mg.toString())
-
-mg.setState(50)
-
-print(mg.toString())
+# print(mg.toString())
