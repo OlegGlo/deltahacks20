@@ -64,9 +64,10 @@ def daysChart():
 
         
 #testOut()
-testcase1()
+#testcase1()
 #initializeDays()
 
-
+'''
 for n in goals:
     print(n.toString())
+'''
