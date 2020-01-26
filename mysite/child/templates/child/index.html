@@ -1,11 +1,51 @@
 
-{% if latest_question_list %}
-    <ul>
-    {% for question in latest_question_list %}
-        <li><a href="{% url 'child:detail' question.id %}">{{ question.question_text }}</a></li>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>No polls are available.</p>
-{% endif %}
+<!DOCTYPE html>
 
+<html>
+
+    <!-- Header -->
+    <head>
+        <title> 
+            Test
+        </title>
+    </head>
+
+    <body>
+        <header>
+            <p>Welcome to this shit</p>
+        </header>
+        <main>
+            {% if latest_question_list %}
+                <ul>
+                {% for question in latest_question_list %}
+                    <li><a href="{% url 'child:detail' question.id %}">{{ question.question_text }}</a></li>
+                    <p>A link AAASDASDA A to my favorite website.</p>
+                {% endfor %}
+                </ul>
+            {% else %}
+                <p>No polls are available.</p>
+            {% endif %}
+
+        </main>
+    <body>
+</html>
+
+<!--
+<html>
+    <head>
+        <title> A Test </title>
+    </head>
+    <body>
+        {% if latest_question_list %}
+            <ul>
+            {% for question in latest_question_list %}
+                <li><a href="{% url 'child:detail' question.id %}">{{ question.question_text }}</a></li>
+                <p>A to my favorite website.</p>
+            {% endfor %}
+            </ul>
+        {% else %}
+            <p>No polls are available.</p>
+        {% endif %}
+    </body>
+</html>
+-->
